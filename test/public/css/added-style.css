@@ -1,0 +1,218 @@
+#container-2 {
+    padding-right: 50%;
+    /*padding-top:10%;*/
+    padding-bottom: 10%;
+}
+
+#text-center-main {
+    font-size: 300%;
+    padding-top: 7%;
+}
+
+.logo-div {
+    padding-top: 7%;
+    padding-right: 11%;
+    /*margin-top:0%;*/
+}
+
+.brand-logo {
+    float: right;
+    width: 20%;
+    padding-top: 3%;
+}
+
+.brand-logo-admin {
+    float: right;
+    width: 40%;
+    padding-left: 20%;
+}
+
+#email-subscribe {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+#zoom {
+    position: relative;
+    /*width:480px;*/
+    /*height:320px;*/
+    overflow: hidden;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    /*-webkit-transition:0.6s ease;*/
+    /*transition:0.6s ease;*/
+}
+
+#zoom:hover {
+    /*padding:10%;*/
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#icon-service {
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+#icon-service-design {
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+#icon-service-sale {
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+#icon-service-phone {
+    width: 64.5%;
+}
+
+#text-center {
+    margin-top: -9%;
+    padding-left: 13%;
+}
+
+#top-bar-logo {
+    width: 24%;
+    margin-top: 3%;
+}
+
+#nav-bar {
+    margin-top: -5%;
+    /*margin-left:7%;*/
+}
+
+#nav-bar-logo-text {
+    /*margin-left:0%;*/
+}
+
+#top-container {
+    padding-top: 3%;
+}
+
+#admin-logo {
+    width: 60%;
+}
+
+#contact_us {
+    padding-bottom: 7%;
+    padding-top: 5%;
+}
+
+#heading_getInTouch {
+    text-align: center;
+}
+
+#row_getInTouch {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+#column_1 {
+    padding-bottom: 10%;
+}
+
+#heading4 {
+    padding-top: 9%;
+}
+
+#top-nav {
+    padding-left: 12%;
+}
+
+#block-location {
+    /*margin-top:-5%;*/
+}
+
+#drag-drop {
+    /*margin-top:11%;*/
+}
+
+#select_option {
+    width: 25%;
+    border-radius: 8px;
+    border-style: solid;
+    padding: 1%;
+    border-width: 2px;
+    margin-bottom: 2%;
+    border-color: black;
+}
+
+.wrapper2 {
+    margin-top: 3%;
+    margin-left: 35%;
+}
+
+#upload_file {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    margin-bottom: 2%;
+}
+
+#option {
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+#image {
+    width: 50%;
+}
+
+#tag {
+    padding-top: 10%;
+}
+
+#feature {
+    background-color: #e0ac1a;
+}
+
+#photo {
+    background-color: #ba2323;
+    margin-top: -4%;
+}
+
+#btn-contact {
+    background-color: #e0ac1a;
+    border-color: black;
+    border-radius: 5px;
+    margin-top: 20%;
+}
+
+#submit_btn {
+    background-color: lightgreen;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: lightgreen;
+    padding: 1%;
+}
+
+#wrapper1 {
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#image_preview > img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 1%;
+}
+
+#detail-para {
+
+}
+
+#column {
+    margin-bottom: 5%;
+}
+
+#top-badge {
+    width:100%;
+}
+
+#top-badge > img {
+    width: 10%;
+    margin-left: 42%;
+}
