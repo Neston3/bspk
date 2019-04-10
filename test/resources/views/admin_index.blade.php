@@ -77,12 +77,12 @@
 
 <div class="col-md-12 shadow-lg p-3 mb-5 bg-white rounded" id="wrapper1">
     @foreach($image as $images )
-        <div class="pull-left">
+        {{--<div class="pull-left">--}}
             <img src="{{ url('img/upload/'.$images->image_name) }}" alt="" style="width: 10%">
             <p>{{$images->image_name}}</p>
-        </div>
+        {{--</div>--}}
         <div class="pull-right">
-            <a href="{{ url() }}" class="btn btn-danger">Delete</a>
+            <a href="#" class="btn btn-danger">Delete</a>
         </div>
     @endforeach
 </div>
