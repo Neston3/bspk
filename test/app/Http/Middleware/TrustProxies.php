@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Laravel\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;
+use Illuminate\Http\Request;
 
 class TrustProxies extends Middleware
 {

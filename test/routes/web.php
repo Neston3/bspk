@@ -27,8 +27,12 @@ Route::get('/tailoring','ImageController@tailor_index');
 
 Route::get('/service/contact');
 
-Route::get('/admin_index', function(){
-    return view('admin_index');
-});
+Route::get('/admin_index', 'AdminController@index');
 
-Route::post('upload/submit','ImageController@store');
+Route::post('/upload/submit', 'AdminController@store');
+
+//Route::post('upload/submit','ImageController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

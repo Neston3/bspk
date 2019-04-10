@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
-use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Redirect;
+use Laravel\Image;
 
 class ImageController extends Controller
 {
@@ -33,39 +30,9 @@ class ImageController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function store(Request $request)
-    {
-        $imageEntry = new Image();
-        //dd($request->upload_file);
-        /*upload images*/
-        if($request->hasFile('upload_file')){
-            $files=$request->file('upload_file');
-
-            foreach ($files as $file) {
-                /*$extension=$file->getClientOriginalExtension();
-                $filename=time().'.'.$extension;*/
-                $filename=$file->getClientOriginalName();
-                $file->move('img/upload/',$filename);
-                $imageEntry->image_name=$filename;
-            }
-
-            $imageEntry->detail=$request->input('detail');
-            $imageEntry->category = $request->input('taskoption');
-            $imageEntry->save();
-        }
-
-        return redirect('/');
-    }
-
-    /**
      * Display the specified resource.
      *
-     * @param  \App\Image $image
+     * @param  \Laravel\Image $image
      * @return \Illuminate\Http\Response
      */
     public function show(Image $image)
@@ -76,7 +43,7 @@ class ImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Image $image
+     * @param  \Laravel\Image $image
      * @return \Illuminate\Http\Response
      */
     public function edit(Image $image)
@@ -88,7 +55,7 @@ class ImageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Image $image
+     * @param  \Laravel\Image $image
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Image $image)
@@ -99,7 +66,7 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Image $image
+     * @param  \Laravel\Image $image
      * @return \Illuminate\Http\Response
      */
     public function destroy(Image $image)
