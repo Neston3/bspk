@@ -33,8 +33,9 @@
 <body>
 <div>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" id="nav-bar">
-        <div class="container" id="top-container"><a class="navbar-brand" href="#" id="nav-bar-logo-text">
-                <img src="{{ url('img/logo.jpg') }}" id="top-bar-logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container" id="top-container"><a class="navbar-brand" href="{{ url('/')}}" id="nav-bar-logo-text">
+                <img src="{{ url('img/logo.jpg') }}" id="top-bar-logo"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                     class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
@@ -72,7 +73,8 @@
                 <p>phone; +255 753 802 525<br></p>
             </div>
             <div class="col-md-6">
-                <form method="post" action="#">
+                <form method="post" action="{{ url('/appointment/submit') }}">
+                    {{csrf_field()}}
                     <h5 class="text-center">Book an appointment</h5>
                     <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
                     <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>

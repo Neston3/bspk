@@ -108,4 +108,12 @@ class ImageController extends Controller
         $category=DB::table('images')->get();
         return view('fabric')->with('type',$category);
     }
+
+    /*
+     * contact page
+     * */
+    public function contact_us(){
+        return view('contactus');
+    }
+
 }

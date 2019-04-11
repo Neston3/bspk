@@ -186,6 +186,10 @@
     margin-top: 20%;
 }
 
+#btn-contact > a{
+    color: white;
+}
+
 #submit_btn {
     background-color: lightgreen;
     border-radius: 5px;
@@ -226,4 +230,14 @@
 #btn-logout {
     float: right;
     margin-top: 2%;
+}
+
+#delete-row {
+    margin-left: 22%;
+    margin-bottom: 3%;
+}
+
+#pagination {
+    margin: auto;
+    max-width: 19%;
 }

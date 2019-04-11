@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="test/public/css/added-style.css"/>
+    <link rel="stylesheet" type="text/css" href="test/public/css/added-style.css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bongo</title>
@@ -76,15 +78,23 @@
 </div>
 
 <div class="col-md-12 shadow-lg p-3 mb-5 bg-white rounded" id="wrapper1">
+
+    <h2 align="center" style="margin-bottom: 2%;">Manage</h2>
+
     @foreach($image as $images )
-        {{--<div class="pull-left">--}}
-            <img src="{{ url('img/upload/'.$images->image_name) }}" alt="" style="width: 10%">
-            <p>{{$images->image_name}}</p>
-        {{--</div>--}}
-        <div class="pull-right">
-            <a href="#" class="btn btn-danger">Delete</a>
+        <div class="row" id="delete-row">
+            <div class="col-md-6" id="">
+                <img src="{{ url('img/upload/'.$images->image_name) }}" alt="" style="width: 10%">
+                <label for="">{{$images->image_name}}</label>
+            </div>
+            <div class="col-md-6">
+                <a href='/delete/{{$images->image_id}}' class="btn btn-danger">Delete</a>
+            </div>
         </div>
     @endforeach
+    <div class="row" id="pagination">
+        {{$image->links()}}
+    </div>
 </div>
 
 <script src="{{ url('js/my.js') }}"></script>

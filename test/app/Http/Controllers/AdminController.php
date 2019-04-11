@@ -3,6 +3,7 @@
 namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Laravel\Image;
 
 class AdminController extends Controller
@@ -18,7 +19,7 @@ class AdminController extends Controller
      * index page for admin
      * */
     public function index(){
-        $image=Image::all();
+        $image=DB::table('images')->paginate(5);
 
         return view('admin_index')->with('image',$image);
     }
@@ -47,8 +48,10 @@ class AdminController extends Controller
         return redirect('/admin_index');
     }
 
-    public function destroy($id, Request $request){
-        
+    public function destroy($id){
+        $image=Image::find($id);
+        $image->delete();
+        return redirect('/admin_index');
     }
 
 }

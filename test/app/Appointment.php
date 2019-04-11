@@ -4,8 +4,8 @@ namespace Laravel;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class Appointment extends Model
 {
     //
-    protected $primaryKey = 'image_id';
+    protected $primaryKey='appointment_id';
 }

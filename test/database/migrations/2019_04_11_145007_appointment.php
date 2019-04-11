@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubscribeTable extends Migration
+class Appointment extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateSubscribeTable extends Migration
      */
     public function up()
     {
-        Schema::create('subscribes', function (Blueprint $table) {
-            $table->bigIncrements('subscribe_id');
-            $table->string('email')->unique();
+        Schema::create('appointments',function (Blueprint $table){
+            $table->bigIncrements('appointment_id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateSubscribeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscribe');
+        Schema::dropIfExists('appointments');
     }
 }

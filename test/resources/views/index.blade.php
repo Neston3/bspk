@@ -90,7 +90,8 @@
             <h2 class="text-center">Subscribe to bongobespoke</h2>
             <p class="text-center">Subscribe for the latest news on fashion and offers from bongobespoke.</p>
         </div>
-        <form class="form-inline" method="post" action="subscription.php">
+        <form class="form-inline" method="post" action="{{ url('/subscribe/submit') }}">
+            {{csrf_field()}}
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
             <div class="form-group"><button class="btn btn-primary" type="submit" name="btn-submit">Subscribe</button></div>
         </form>
