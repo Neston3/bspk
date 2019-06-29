@@ -26,7 +26,14 @@ class AppointmentController extends Controller
         $subscribe=new Subscribe();
         $subscribe->email=$request->input('email');
         $subscribe->save();
+        
+//         $to      = 'maricaneston38@gmail.com';
+//         $subject = 'test';
+//         $message = 'test sms';
 
+//         mail($to, $subject, $message);
+        
+        
         return Redirect::back();
 
     }
