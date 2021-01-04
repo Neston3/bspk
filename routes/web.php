@@ -13,9 +13,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
+Auth::routes();
+
+Route::get('/', 'ImageController@index')->name('home');
 
 Route::get('/embroidering','ImageController@embroid_index');
 
@@ -27,16 +27,18 @@ Route::get('/tailoring','ImageController@tailor_index');
 
 Route::get('/service/contact', 'ImageController@contact_us');
 
+Route::post('/appointment/submit','AppointmentController@store');
+
+Route::post('/subscribe/submit', 'AppointmentController@subscribe');
+
 Route::get('/admin_index', 'AdminController@index');
 
 Route::post('/upload/submit', 'AdminController@store');
 
 Route::get('/delete/{image_id}','AdminController@destroy');
 
-Route::post('/appointment/submit','AppointmentController@store');
-
-Route::post('/subscribe/submit', 'AppointmentController@subscribe');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    return 'DONE'; //Return anything
+});

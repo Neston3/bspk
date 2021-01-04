@@ -12,7 +12,6 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-//        $this->middleware('auth')->except(['index']);
     }
 
     /*
@@ -21,7 +20,7 @@ class AdminController extends Controller
     public function index(){
         $image=DB::table('images')->paginate(5);
 
-        return view('admin_index')->with('image',$image);
+        return view('admin_home')->with('image',$image);
     }
 
     public function store(Request $request)

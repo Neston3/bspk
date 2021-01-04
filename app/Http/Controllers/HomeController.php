@@ -3,6 +3,7 @@
 namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laravel\Image;
 
 class HomeController extends Controller
 {
@@ -11,10 +12,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -23,14 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect()->intended($this->redirectPath());
+
     }
 
-    private function redirectPath()
-    {
-        if (\Auth::User()->name=="chiboko"){
-            return '/admin_index';
-        }
-        return'/';
-    }
 }
